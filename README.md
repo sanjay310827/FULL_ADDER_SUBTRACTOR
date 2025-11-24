@@ -49,6 +49,26 @@ Program to design a half subtractor and full subtractor circuit and verify its t
 Developed by: SANJAY A
 RegisterNumber: 25016505
 
+```
+
+***full-adder***
+
+module fa(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+xor g1(sum,a,b,c);
+assign carry=((a&b)|(b&c)|(c&a))
+endmodule
+
+***full-subtractor***
+module fs(a,b,c,diff,borrow);
+input a,b,c;
+output diff,borrow;
+xor g1(diff,a,b,c);
+assign borrow=((b&c)|(~a&c)|(~a&b))
+endmodule
+
+
 
 
 **RTL Schematic**
