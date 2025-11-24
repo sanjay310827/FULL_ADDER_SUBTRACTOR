@@ -67,6 +67,7 @@ output diff,borrow;
 xor g1(diff,a,b,c);
 assign borrow=((b&c)|(~a&c)|(~a&b))
 endmodule
+```
 
 
 
